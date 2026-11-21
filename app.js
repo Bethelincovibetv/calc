@@ -1,19 +1,14 @@
 const taskInput = document.getElementById('tasks');
+const profitInput = document.getElementById('profit');
 const dailyDisplay = document.getElementById('daily');
-const weeklyDisplay = document.getElementById('weekly');
-const monthlyDisplay = document.getElementById('monthly');
-
-const RATE_PER_TASK = 500;
 
 function calculateEarnings() {
-    const tasks = parseInt(taskInput.value) || 0;
-    const daily = tasks * RATE_PER_TASK;
-    const weekly = daily * 7;
-    const monthly = daily * 30;
+    const tasks = parseFloat(taskInput.value) || 0;
+    const profit = parseFloat(profitInput.value) || 0;
+    const daily = tasks * profit;
 
-    dailyDisplay.innerText = `₦${daily.toLocaleString()}`;
-    weeklyDisplay.innerText = `₦${weekly.toLocaleString()}`;
-    monthlyDisplay.innerText = `₦${monthly.toLocaleString()}`;
+    dailyDisplay.innerText = `$${daily.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
 }
 
 taskInput.addEventListener('input', calculateEarnings);
+profitInput.addEventListener('input', calculateEarnings);

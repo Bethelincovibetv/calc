@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GGD Ad Network | Earnings Estimator</title>
+    <title>Profit Calculator | Glassmorphism</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="main-wrapper">
-        <div class="estimator-card">
-            <h1>GGD Earnings Estimator</h1>
+    <div class="container">
+        <div class="glass-card">
+            <h1>Earnings Estimator</h1>
+            <p class="subtitle">Enter your daily metrics</p>
             <div class="input-group">
-                <label for="tasks">Number of Daily Tasks</label>
-                <input type="number" id="tasks" placeholder="e.g. 10" min="0">
+                <input type="number" id="tasks" placeholder="Tasks Per Day">
+                <input type="number" id="profit" placeholder="Profit Per Task ($)">
             </div>
-            <div class="results">
-                <div class="res-box">Daily: <span id="daily">0</span></div>
-                <div class="res-box">Weekly: <span id="weekly">0</span></div>
-                <div class="res-box">Monthly: <span id="monthly">0</span></div>
+            <div class="result-container">
+                <p>Total Daily Profit</p>
+                <h2 id="daily">$0.00</h2>
             </div>
-            <a href="#" class="cta-button">JOIN NOW</a>
+            <button class="cta-btn">Start Earning Today</button>
         </div>
     </div>
     <script src="app.js"></script>

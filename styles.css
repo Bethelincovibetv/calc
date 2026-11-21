@@ -1,48 +1,53 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #ff4d00, #ffc107);
+    background: linear-gradient(135deg, #ff4d00, #ffc107, #ff0000);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
 }
-
-.estimator-card {
-    background: #fff;
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 3rem;
     border-radius: 30px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-    width: 100%;
-    max-width: 400px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 450px;
     text-align: center;
+    color: white;
 }
-
-h1 { color: #d32f2f; margin-bottom: 20px; }
-
-.input-group { margin-bottom: 25px; }
+h1 { margin-bottom: 0.5rem; }
+.subtitle { margin-bottom: 2rem; opacity: 0.8; }
 input {
     width: 100%;
     padding: 15px;
-    border: 2px solid #ffc107;
-    border-radius: 15px;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.results { display: grid; gap: 10px; margin-bottom: 30px; }
-.res-box { padding: 15px; background: #fff8e1; border-radius: 10px; font-weight: 600; border: 1px solid #ffe0b2; }
-
-.cta-button {
-    display: block;
-    background: #d32f2f;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255,255,255,0.2);
     color: white;
+    font-size: 1rem;
+}
+input::placeholder { color: #eee; }
+.result-container {
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+#daily { font-size: 2.5rem; color: #fff; }
+.cta-btn {
+    width: 100%;
     padding: 15px;
-    text-decoration: none;
-    border-radius: 15px;
-    font-weight: 800;
+    background: #fff;
+    color: #ff4d00;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
     transition: transform 0.2s;
 }
-
-.cta-button:hover { transform: scale(1.05); }
+.cta-btn:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
