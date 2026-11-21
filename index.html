@@ -3,36 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegant Calculator</title>
+    <title>GGD Ad Network | Earnings Estimator</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="calculator-container">
-        <div class="calculator">
-            <div class="calculator-display" data-display>0</div>
-            <div class="calculator-keys">
-                <button class="key-clear span-2" data-clear>C</button>
-                <button class="key-operator" data-delete>DEL</button>
-                <button class="key-operator" data-operator>÷</button>
-                <button class="key-number" data-number>7</button>
-                <button class="key-number" data-number>8</button>
-                <button class="key-number" data-number>9</button>
-                <button class="key-operator" data-operator>×</button>
-                <button class="key-number" data-number>4</button>
-                <button class="key-number" data-number>5</button>
-                <button class="key-number" data-number>6</button>
-                <button class="key-operator" data-operator>−</button>
-                <button class="key-number" data-number>1</button>
-                <button class="key-number" data-number>2</button>
-                <button class="key-number" data-number>3</button>
-                <button class="key-operator" data-operator>+</button>
-                <button class="key-number span-2" data-number>0</button>
-                <button class="key-number" data-number>.</button>
-                <button class="key-equals" data-equals>=</button>
+    <div class="main-wrapper">
+        <div class="estimator-card">
+            <h1>GGD Earnings Estimator</h1>
+            <div class="input-group">
+                <label for="tasks">Number of Daily Tasks</label>
+                <input type="number" id="tasks" placeholder="e.g. 10" min="0">
             </div>
+            <div class="results">
+                <div class="res-box">Daily: <span id="daily">0</span></div>
+                <div class="res-box">Weekly: <span id="weekly">0</span></div>
+                <div class="res-box">Monthly: <span id="monthly">0</span></div>
+            </div>
+            <a href="#" class="cta-button">JOIN NOW</a>
         </div>
     </div>
     <script src="app.js"></script>
